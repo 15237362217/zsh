@@ -1,0 +1,17 @@
+在目标机器上解压配置文件
+登录到目标机器，然后解压配置文件：
+cd ~
+tar -xzvf zsh_config_backup.tar.gz
+
+安装 zsh：
+sudo apt update
+sudo apt install zsh
+
+如果使用了 Oh My Zsh，但未安装，可以重新安装
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+然后覆盖解压的 .oh-my-zsh 文件夹。
+
+
+ 切换默认 shell
+ chsh -s $(which zsh)
+ 重新登录后，zsh 会自动加载配置。
